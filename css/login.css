@@ -1,0 +1,30 @@
+#loginDiv{
+    width: 40%;
+    height: 10em;
+    background-color: #F9C784;
+    border: #FF8C42 10px inset;
+    border-radius: 10px;
+    border-bottom: none;
+    border-left: none;
+    padding: 1em;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+#loginInput{
+    width: 40%;
+    color: #FFFFFF;
+    padding: 0.3em;
+    background-color: #FF8C42;
+    border: #4E598C 5px solid;
+    border-radius: 10px;
+
+}
+#loginInput:hover{
+    background-color: #e37d3d;
+    border: #434e7f 5px solid;
+    border-radius: 10px;
+}
