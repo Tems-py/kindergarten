@@ -19,10 +19,26 @@
             <div id="profile"><img src="https://robohash.org/tt?set=set4" alt=""> {pph}</div>
         </div>
         <div id="content">
-           <div class="row">A A A</div>
-           <div class="row">A A A</div>
-           <div class="row">A A A</div>
-           <div class="row">A A A</div>
+           <div class="row">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           </div>
+           <div class="row">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+            </div>
+           <div class="row">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           </div>
+           <div class="row">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+           <img src="https://robohash.org/tt?set=set4" alt="">
+        </div>
         </div>
     </div>
 </body>
