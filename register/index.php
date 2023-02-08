@@ -22,15 +22,19 @@
             <div>
                 <form method="post" id="registerDiv">
                     Email:<input type="text" name="email" class="registerInput" placeholder="example@example.example"><br>
-                    Password:<input type="text" name="password" class="registerInput" placeholder="example_pasword"><br>
-                    Repeat:<input type="text" name="repeatPassword" class="registerInput" placeholder="*repeat* example_pasword"><br>
+                    Password:<input type="password" name="password" class="registerInput" placeholder="example_pasword"><br>
+                    Repeat:<input type="password" name="repeatPassword" class="registerInput" placeholder="*repeat* example_pasword"><br>
                     <input type="submit" value="Register" class="registerInput">
                 </form>
                 <?php
                 
                 $conn = mysqli_connect('localhost','root','','kindergarten');
                 
-
+                if(isset($_POST['email']) && isset($_POST['password']) && isset(['repeatPassword'])){
+                    if($_POST['password']==$_POST['repeatPassword']){
+                        $query = mysqli_query("INSERT INTO `accounts`(`email`, `accountType`, `password`) VALUES ('{$_POST['email']}','NONE','{$_POST['password']}')")
+                    }
+                }
                 ?>
             </div>
         </div>
