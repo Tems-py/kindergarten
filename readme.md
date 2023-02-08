@@ -5,4 +5,5 @@
 #ff8c42
 
 
+
 800x600 px musi dzialac

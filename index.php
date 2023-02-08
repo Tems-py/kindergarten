@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <?php
+    
+    $conn = mysqli_connect("localhost",'root','','kindergarten');
+    
+    ?>
     <div id="container">
         <div id="navbar">
             <div id="buttons">
@@ -23,21 +28,50 @@
             <div class="stat flex_column">
                 <h3>Children</h3>
                 <div class="stat_num">
-                    200
+
+                <?php
+
+                $query = mysqli_query($conn, "SELECT * FROM `children`");
+                $child_amount = 0;
+
+                while($row = mysqli_fetch_array($query)){
+                $child_amount = $child_amount + 1;
+                }
+                echo $child_amount
+                ?>
+
                 </div>
                 <img src="" alt="">
             </div>
             <div class="stat flex_column">
                 <h3>Parents</h3>
                 <div class="stat_num">
-                    200
+                <?php
+
+                $query = mysqli_query($conn, "SELECT * FROM `accounts` WHERE accountType = 'parent'");
+                $child_amount = 0;
+
+                while($row = mysqli_fetch_array($query)){
+                $child_amount = $child_amount + 1;
+                }
+                echo $child_amount
+                ?>
                 </div>
                 <img src="" alt="">
             </div>
             <div class="stat flex_column">
                 <h3>Groups</h3>
                 <div class="stat_num">
-                    200
+                    <?php
+
+                    $query = mysqli_query($conn, "SELECT * FROM `groups`");
+                    $child_amount = 0;
+
+                    while($row = mysqli_fetch_array($query)){
+                        $child_amount = $child_amount + 1;
+                    }
+                    echo $child_amount
+                    ?>
                 </div>
                 <img src="" alt="">
             </div>
