@@ -14,7 +14,7 @@
     justify-content: space-evenly;
     flex-direction: column;
 }
-#loginInput{
+.loginInput{
     width: 40%;
     color: #FFFFFF;
     padding: 0.3em;
@@ -23,7 +23,7 @@
     border-radius: 10px;
 
 }
-#loginInput:hover{
+.loginInput:hover{
     background-color: #e37d3d;
     border: #434e7f 5px solid;
     border-radius: 10px;
