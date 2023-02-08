@@ -25,16 +25,20 @@
             <div>
                 <form method="post" id="loginDiv">
                     Email:<input type="text" name="email" class="loginInput" placeholder="example@example.example"><br>
-                    Password:<input type="text" name="password" class="loginInput" placeholder="example_pasword"><br>
+                    Password:<input type="password" name="password" class="loginInput" placeholder="example_pasword"><br>
                     <input type="submit" value="Login" class="loginInput">
                 </form>
                 <?php
                 
                 $conn = mysqli_connect('localhost','root','','kindergarten');
-                if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["email"])){
-                    $query = mysqli_query($conn, "SELECT name, password from accounts WHERE email = '{$_POST['email']}'");
-                    $row = mysqli_fetch_row($conn);
-                    if ($row['password'] == $_POST["password"]){
+                if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["email"]) && isset($_POST["password"])){
+                    $email = $_POST["email"];
+                    $password = $_POST["password"];
+                    $query = mysqli_query($conn, "SELECT name, `password` as pass from accounts WHERE email = '{$email}'");
+                    
+                    $row = mysqli_fetch_array($query);
+                    if ($row['pass'] == $password){
+                        $_SESSION['name'] = $row['name'];
                         header("Location: http://localhost/kindergarten/panel/admin");
                         die();
                     }
