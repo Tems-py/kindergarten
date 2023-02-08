@@ -21,7 +21,7 @@
     <div id="container">
         <div id="navbar">
             <div id="buttons">
-                <div id="button">Gallery</div>
+                <div id="button"><a href="galery">Gallery</a></div>
                 <div id="button">Contact</div>
                 <div id="button">Terms and contidions</div>
             </div>
