@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    $conn = mysqli_connect("localhost", "root", "", "kindergarten");
+    $query = mysqli_query($conn, "SELECT * FROM `accounts`");
+    if (!isset($_SESSION["name"])){
+        header("Location: http://localhost/kindergarten");
+        die();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +35,7 @@
             </div>
             <div id="data">
                 <div class="flex_row">
-                    <h1>Welcome to your kindergarten</h1>
+                    <h1>Welcome <?php echo $_SESSION["name"]?>to your kindergarten</h1>
                     <img src="../../img/logo.svg" alt="">
                 </div>
                 <div class="flex_row" id="stat">

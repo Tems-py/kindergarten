@@ -41,3 +41,32 @@ body{
     border-left: none;
     padding: 1em;
 }
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.stat{
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: dimgrey;
+}
+
+.stat_num {
+    font-size: 4em;
+    font-weight: 800;
+}
+
