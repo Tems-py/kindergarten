@@ -15,7 +15,7 @@
     <div id="container">
         <div id="navbar">
             <div id="buttons">
-                <div id="button"><a href="galery">Gallery</a></div>
+                <div id="button"><a href="gallery">Gallery</a></div>
                 <div class="button">Contact</div>
                 <div class="button">Terms and contidions</div>
             </div>
@@ -34,7 +34,7 @@
                 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["email"]) && isset($_POST["password"])){
                     $email = $_POST["email"];
                     $password = $_POST["password"];
-                    $query = mysqli_query($conn, "SELECT name, `password` as pass from accounts WHERE email = '{$email}'");
+                    $query = mysqli_query($conn, "SELECT name, `password` as pass from accounts WHERE email = '$email'");
                     
                     $row = mysqli_fetch_array($query);
                     if ($row['pass'] == $password){

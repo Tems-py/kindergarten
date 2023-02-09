@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindergarden</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/galery.css">
+    <link rel="stylesheet" href="../css/gallery.css">
 </head>
 <body>
     <div id="container">
         <div id="navbar">
             <div id="buttons">
-                <div id="button"><a href="galery">Gallery</a></div>
+                <div id="button"><a href="gallery">Gallery</a></div>
                 <div id="button">Contact</div>
                 <div id="button">Terms and contidions</div>
             </div>
