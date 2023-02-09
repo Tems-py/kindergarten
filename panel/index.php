@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kindergarten</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <div id="container">
-        <div id="navbar">
-            <div id="buttons">
-                <div id="button"><a href="gallery">Gallery</a></div>
-                <div id="button">Contact</div>
-                <div id="button">Terms and contidions</div>
-            </div>
-            <div id="profile"><img src="https://robohash.org/tt?set=set4" alt=""> {pph}</div>
-        </div>
-        <div id="content">
-            <div id="sidebar">
-                
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+<?php
+
+session_start();
+
+if (!isset($_SESSION["name"])){
+    header("Location: http://localhost/kindergarten");
+    die();
+}
+$conn = mysqli_connect("localhost", "root", "", "kindergarten");
+
+$email = $_SESSION['email'];
+$query = mysqli_query($conn, "SELECT accountType from accounts where email = '{$email}'");
+$row = mysqli_fetch_array($query);
+if ($row['accountType'] == 'admin'){
+    header("Location: admin", true, 301);
+    die();
+    }
+else if ($row['accountType'] == 'parent'){
+    header("Location: parent", true, 301);
+    die();
+}
+else if ($row['accountType'] == 'educator'){
+    header("Location: educator", true, 301);
+    die();
+}
+
+?>

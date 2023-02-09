@@ -30,9 +30,9 @@
                 
                 $conn = mysqli_connect('localhost','root','','kindergarten');
                 
-                if(isset($_POST['email']) && isset($_POST['password']) && isset(['repeatPassword'])){
+                if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['repeatPassword'])){
                     if($_POST['password']==$_POST['repeatPassword']){
-                        $query = mysqli_query("INSERT INTO `accounts`(`email`, `accountType`, `password`) VALUES ('{$_POST['email']}','NONE','{$_POST['password']}')")
+                        $query = mysqli_query($conn, "INSERT INTO `accounts`(`email`, `accountType`, `password`) VALUES ('{$_POST['email']}','NONE','{$_POST['password']}')");
                     }
                 }
                 ?>

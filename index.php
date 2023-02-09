@@ -1,3 +1,7 @@
+<?php
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,17 @@
                 <div id="button">Contact</div>
                 <div id="button">Terms and contidions</div>
             </div>
-            <div id="profile"><img src="https://robohash.org/tt?set=set4" alt=""> {pph}</div>
+            <div id="profile"><img src="https://robohash.org/tt?set=set4" alt="">
+                <?php
+
+                if (isset($_SESSION['email'])) {
+                    echo '<a href="panel">Panel</a>';
+                }
+                else {
+                    echo '<a href="login">Login</a>';
+                }
+                ?>
+            </div>
         </div>
         <div id="content">
         <div class="flex_row"><h1>Welcome to Kids Park, your kindergarten!</h1><img src="img/logo.svg" alt=""></div>
