@@ -41,7 +41,7 @@
         </div>
         <div id="content">
             <div id="sidebar">
-                <a href="new_child">Add new child</a>
+                <a href="./create_child">Add new child</a>
                 <a href="edit_child">Edit child</a>
                 <a href="edit_parent">Edit parent</a>
             </div>

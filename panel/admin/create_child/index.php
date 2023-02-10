@@ -42,7 +42,7 @@
         </div>
         <div id="content">
             <div id="sidebar">
-                <a href="new_child">Add new child</a>
+                <a href="">Add new child</a>
                 <a href="edit_child">Edit child</a>
                 <a href="edit_parent">Edit parent</a>
             </div>
@@ -57,16 +57,25 @@
                 Group (leave empty if needed):
                 <select name="group" id="">
                     <?php
-                        $query = mysqli_query($conn, "SELECT id, name from GROUP");
+                        $query = mysqli_query($conn, "SELECT groupId as id, groupName as name from GROUPS");
 
                         while ($row = mysqli_fetch_array($query)){
                             echo "<option value='{$row['id']}'>{$row['name']}</option>";
                         }
-                        
                     ?>
                     
-                </select>
+                </select><br>
+                <input type="submit" value="Add">
                 </form>
+                <?php
+                    $name = $_POST['name'];
+                    $surname = $_POST['surname'];
+                    $birthdate = $_POST['birthdate'];
+                    $group = $_POST['group'];
+
+                    $query = mysqli_query($conn, "INSERT INTO `children` (`id`, `name`, `familyName`, `birthdate`, `groupId`) VALUES (NULL, '$name', '$surname', '$birthdate', '$group');")
+
+                ?>
             </div>
         </div>
     </div>
