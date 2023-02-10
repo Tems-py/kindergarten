@@ -39,7 +39,7 @@
                         if ($row['pass'] == $password){
                             $_SESSION['name'] = $row['name'];
                             $_SESSION['email'] = $row['email'];
-                            header("Location: panel");
+                            header("Location: /kindergarten/panel");
                             die();
                         }
                         else {

@@ -28,7 +28,8 @@ session_start();
                 <?php
 
                 if (isset($_SESSION['email'])) {
-                    echo '<a href="panel">Panel</a>';
+                    echo '<a href="panel">Panel</a> ';
+                    echo '<a href="logout">Logout</a>';
                 }
                 else {
                     echo '<a href="login">Login</a>';
