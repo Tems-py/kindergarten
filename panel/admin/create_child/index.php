@@ -68,16 +68,16 @@
                 <input type="submit" value="Add">
                 </form>
                 <?php
-                    $name = $_POST['name'];
-                    $surname = $_POST['surname'];
-                    $birthdate = $_POST['birthdate'];
-                    $group = $_POST['group'];
+                    if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['birthdate']) && isset($_POST['group'])){
+                        $name = $_POST['name'];
+                        $surname = $_POST['surname'];
+                        $birthdate = $_POST['birthdate'];
+                        $group = $_POST['group'];
 
-                    $query = mysqli_query($conn, "INSERT INTO `children` (`id`, `name`, `familyName`, `birthdate`, `groupId`) VALUES (NULL, '$name', '$surname', '$birthdate', '$group');")
-
+                        $query = mysqli_query($conn, "INSERT INTO `children` (`id`, `name`, `familyName`, `birthdate`, `groupId`) VALUES (NULL, '$name', '$surname', '$birthdate', '$group');");
+                    }
                 ?>
             </div>
         </div>
-    </div>
 </body>
 </html>

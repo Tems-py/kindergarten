@@ -1,0 +1,11 @@
+#info {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-align: left;
+}
+
+input[type="submit"]{
+    max-width: 10em;
+}

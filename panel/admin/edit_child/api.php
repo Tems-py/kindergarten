@@ -14,8 +14,8 @@
         die();
     }
     $child = $_POST['child'];
-    $query = mysqli_query($conn, "SELECT * from CHILD where id = {$child}");
+    $query = mysqli_query($conn, "SELECT * from children where id = $child");
     $row = mysqli_fetch_array($query);
-    echo ''
+    echo json_encode($row);
 
 ?>

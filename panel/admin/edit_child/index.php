@@ -16,8 +16,8 @@
     <title>Kindergarten</title>
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/admin.css">
-    <link rel="stylesheet" href="../../../css/create_child.css">
-
+    <link rel="stylesheet" href="../../../css/edit_child.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
     <script src="../../../scripts/edit_child.js" defer></script>
 </head>
 <body>
@@ -49,7 +49,8 @@
                 <a href="edit_parent">Edit parent</a>
             </div>
             <div id="data">
-                <select name="" id="child">
+                <form action="" method="POST">
+                Select child: <select name="child" id="child">
                     <?php
                         $query = mysqli_query($conn, "SELECT * FROM `children`");
 
@@ -57,12 +58,47 @@
                             echo "<option value='{$row['id']}'>{$row['name']} {$row['familyName']} ({$row['id']})</option>";
                         }
                     ?>
-                    <div id="info">
-                        <input type="text">
-                    </div>
                 </select>
+                    <div id="info">
+                         <label>
+                            Name:
+                            <input type="text" id="i_name" name="name">
+                        </label>
+                        <label>
+                            Surname:
+                            <input type="text" id="i_surname" name="surname">
+                        </label>
+                        <label>
+                            Birthdate:
+                            <input type="date" id="i_birthdate" name="birthdate">
+                        </label>
+                        <label>
+                            Group:
+                            <select id="i_group" name="group">
+                                <?php
+                                $query = mysqli_query($conn, "SELECT groupId as id, groupName as name from 'GROUPS'");
+
+                                while ($row = mysqli_fetch_array($query)){
+                                    echo "<option value='{$row['id']}'>{$row['name']}</option>";
+                                }
+                                ?>
+                            </select>
+                        </label>
+                        <input type="submit" value="Update">
+                    </div>
+                </form>
+                    <?php
+                        if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['birthdate']) && isset($_POST['group'])){
+                            $name = $_POST['name'];
+                            $surname = $_POST['surname'];
+                            $birthdate = $_POST['birthdate'];
+                            $group = $_POST['group'];
+                            $id = $_POST['child'];
+
+                            $query = mysqli_query($conn, "UPDATE `children` SET `name` = '$name', `familyName` = '$surname', `birthdate` = '$birthdate', `groupId` = '$group' WHERE `children`.`id` = $id;");
+                        }
+                    ?>
             </div>
         </div>
-    </div>
 </body>
 </html>
