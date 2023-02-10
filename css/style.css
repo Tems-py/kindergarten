@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
 body{
     font-family: Roboto;
 }
@@ -16,10 +22,18 @@ body{
     border-bottom: none;
     border-left: none;
     padding: 1em;
+    font-size: 1.3em;
+}
+
+#profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2em;
 }
 
 #profile > img {
-    width: 1em;
+    width: 1.3em;
 }
 
 #buttons {

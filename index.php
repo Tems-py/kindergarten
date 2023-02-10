@@ -24,11 +24,12 @@ session_start();
                 <div id="button">Contact</div>
                 <div id="button">Terms and contidions</div>
             </div>
-            <div id="profile"><img src="https://robohash.org/tt?set=set4" alt="">
+            
                 <?php
 
                 if (isset($_SESSION['email'])) {
-                    echo '<a href="panel">Panel</a> ';
+                    echo '<div id="profile"><img src="https://robohash.org/'.$_SESSION['email'].'?set=set4" alt="">  ';
+                    echo '<a href="panel">Panel</a>  ';
                     echo '<a href="logout">Logout</a>';
                 }
                 else {
