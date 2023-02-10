@@ -7,3 +7,6 @@
 
 
 800x600 px musi dzialac
+
+todo:
+    api edit children

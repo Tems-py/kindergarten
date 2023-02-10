@@ -14,8 +14,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindergarten</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
+    <link rel="stylesheet" href="../../../css/create_child.css">
+
+    <script src="../../../scripts/edit_child.js" defer></script>
 </head>
 <body>
     <div id="container">
@@ -41,38 +44,23 @@
         </div>
         <div id="content">
             <div id="sidebar">
-                <a href="./create_child">Add new child</a>
+                <a href="">Add new child</a>
                 <a href="edit_child">Edit child</a>
                 <a href="edit_parent">Edit parent</a>
             </div>
             <div id="data">
-                <div class="flex_row">
-                    <h1>Welcome <?php echo $_SESSION["name"]?> to your kindergarten</h1>
-                    <img src="../../img/logo.svg" alt="">
-                </div>
-                <div class="flex_row" id="stat">
-                    <div class="stat flex_column">
-                        <h3>Children</h3>
-                        <div class="stat_num">
-                            200
-                        </div>
-                        <img src="" alt="">
+                <select name="" id="child">
+                    <?php
+                        $query = mysqli_query($conn, "SELECT * FROM `children`");
+
+                        while ($row = mysqli_fetch_array($query)){
+                            echo "<option value='{$row['id']}'>{$row['name']} {$row['familyName']} ({$row['id']})</option>";
+                        }
+                    ?>
+                    <div id="info">
+                        <input type="text">
                     </div>
-                    <div class="stat flex_column">
-                        <h3>Parents</h3>
-                        <div class="stat_num">
-                            200
-                        </div>
-                        <img src="" alt="">
-                    </div>
-                    <div class="stat flex_column">
-                        <h3>Groups</h3>
-                        <div class="stat_num">
-                            200
-                        </div>
-                        <img src="" alt="">
-                    </div>
-                </div>
+                </select>
             </div>
         </div>
     </div>
