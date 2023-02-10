@@ -23,5 +23,9 @@ else if ($row['accountType'] == 'educator'){
     header("Location: educator", true, 301);
     die();
 }
+else{
+    header("Location: ../",true,301);
+    die();
+}
 
 ?>
