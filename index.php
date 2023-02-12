@@ -57,7 +57,7 @@ session_start();
                 ?>
 
                 </div>
-                <img src="" alt="">
+                <img src="img/mortarboard.png" alt="">
             </div>
             <div class="stat flex_column">
                 <h3>Parents</h3>
@@ -73,7 +73,7 @@ session_start();
                 echo $child_amount
                 ?>
                 </div>
-                <img src="" alt="">
+                <img src="img/user.png" alt="">
             </div>
             <div class="stat flex_column">
                 <h3>Groups</h3>
@@ -89,7 +89,7 @@ session_start();
                     echo $child_amount
                     ?>
                 </div>
-                <img src="" alt="">
+                <img src="img/crowd-of-users.png" alt="">
             </div>
         </div>
         </div>

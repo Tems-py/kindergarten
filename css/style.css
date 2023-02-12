@@ -82,3 +82,8 @@ body{
     font-weight: 800;
 }
 
+.stat > img {
+    max-width: 200px;
+
+}
+
