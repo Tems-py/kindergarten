@@ -1,11 +1,6 @@
-<?php 
-    session_start();
-    $conn = mysqli_connect("localhost", "root", "", "kindergarten");
-    $query = mysqli_query($conn, "SELECT * FROM `accounts`");
-    if (!isset($_SESSION["name"])){
-        header("Location: http://localhost/kindergarten");
-        die();
-    }
+<?php
+    include "../../auth.php";
+    auth("admin");
 ?>
 <!DOCTYPE html>
 <html lang="en">
