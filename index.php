@@ -53,7 +53,7 @@ session_start();
                 while($row = mysqli_fetch_array($query)){
                 $child_amount = $child_amount + 1;
                 }
-                echo $child_amount
+                echo $child_amount;
                 ?>
 
                 </div>
@@ -70,7 +70,7 @@ session_start();
                 while($row = mysqli_fetch_array($query)){
                 $child_amount = $child_amount + 1;
                 }
-                echo $child_amount
+                echo $child_amount;
                 ?>
                 </div>
                 <img src="img/user.png" alt="">
@@ -86,7 +86,7 @@ session_start();
                     while($row = mysqli_fetch_array($query)){
                         $child_amount = $child_amount + 1;
                     }
-                    echo $child_amount
+                    echo $child_amount;
                     ?>
                 </div>
                 <img src="img/crowd-of-users.png" alt="">
