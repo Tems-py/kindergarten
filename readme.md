@@ -9,4 +9,5 @@
 800x600 px musi dzialac
 
 todo:
-    fix register wih name and surname
+- fix register wih name and surname
+- jak parent nie ma dzieci to dziwnie panel sie wyswieela
