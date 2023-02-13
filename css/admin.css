@@ -38,3 +38,7 @@ img {
     width: 10em;
 }
 
+#myChart {
+    min-width: 0;
+    max-width: 100%;
+}

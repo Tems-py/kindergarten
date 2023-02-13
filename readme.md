@@ -9,4 +9,4 @@
 800x600 px musi dzialac
 
 todo:
-    api edit children
+    fix register wih name and surname

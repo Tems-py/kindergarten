@@ -12,6 +12,9 @@
     <title>Kindergarten</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="../../scripts/admin.js" defer></script>
 </head>
 <body>
     <div id="container">
@@ -98,7 +101,9 @@
                         <img src="../../img/crowd-of-users.png" alt="">
                     </div>
                 </div>
+                <canvas id="myChart"></canvas>
             </div>
+            
         </div>
             </div>
         </div>
