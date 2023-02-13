@@ -46,9 +46,13 @@
                         $email = $_POST["email"];
                         $password = $_POST["password"];
                         $query = mysqli_query($conn, "SELECT name, email, `password` as pass from accounts WHERE email = '$email'");
+                        if (mysqli_num_rows($query) == 0){
+                            echo "Złe dane!";
 
-                        $row = mysqli_fetch_array($query);
-                        if ($row['pass'] == $password){
+                        }
+                        
+                        else if (mysqli_fetch_array($query)['pass'] == $password){
+                            $row = mysqli_fetch_array($query);
                             $_SESSION['name'] = $row['name'];
                             $_SESSION['email'] = $row['email'];
                             header("Location: /kindergarten/panel");
