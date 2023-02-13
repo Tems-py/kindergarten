@@ -1,5 +1,6 @@
 <?php
     include "../../auth.php";
+    $conn = mysqli_connect("localhost", "root", "", "kindergarten");
     auth("admin");
 ?>
 <!DOCTYPE html>
