@@ -45,22 +45,24 @@
                     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["email"]) && isset($_POST["password"])){
                         $email = $_POST["email"];
                         $password = $_POST["password"];
-                        $query = mysqli_query($conn, "SELECT name, email, `password` as pass from accounts WHERE email = '$email'");
+                        $query = mysqli_query($conn, "SELECT `name`, email, `password` as pass from accounts WHERE email = '$email'");
                         if (mysqli_num_rows($query) == 0){
                             echo "Złe dane!";
-
-                        }
-                        
-                        else if (mysqli_fetch_array($query)['pass'] == $password){
-                            $row = mysqli_fetch_array($query);
-                            $_SESSION['name'] = $row['name'];
-                            $_SESSION['email'] = $row['email'];
-                            header("Location: /kindergarten/panel");
-                            die();
                         }
                         else {
-                            echo "Złe hasło!<br>";
+                            $row = mysqli_fetch_array($query);
+                            if ($row['pass'] == $password){
+                                $_SESSION['name'] = $row['name'];
+                                $_SESSION['email'] = $row['email'];
+                                header("Location: /kindergarten/panel");
+                                die();
+                            }
+                            else {
+                                echo "Złe hasło!<br>";
+                            }
                         }
+                        
+
                     }
 
                     ?>

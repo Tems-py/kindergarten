@@ -2,7 +2,7 @@
 function auth($type){
     session_start();
     if (!isset($_SESSION["name"])){
-        header("Location: http://localhost/kindergarten");
+        header("Location: http://localhost/kindergarten/feueye");
         die();
     }
     $conn = mysqli_connect("localhost", "root", "", "kindergarten");
@@ -10,8 +10,8 @@ function auth($type){
     $query = mysqli_query($conn, "SELECT * FROM `accounts` WHERE email = '$email'");
     $row = mysqli_fetch_array($query);
 
-    if ($row['type'] != $type) {
-        header("Location: http://localhost/kindergarten");
+    if ($row['accountType'] != $type) {
+        header("Location: http://localhost/kindergarten/wahueawu");
         die();
     }
 }
