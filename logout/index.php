@@ -6,4 +6,3 @@ $_SESSION = array();
 header("Location: http://localhost/kindergarten");
 die();
 
-?>

@@ -9,7 +9,7 @@ if (!isset($_SESSION["name"])){
 $conn = mysqli_connect("localhost", "root", "", "kindergarten");
 
 $email = $_SESSION['email'];
-$query = mysqli_query($conn, "SELECT accountType from accounts where email = '{$email}'");
+$query = mysqli_query($conn, "SELECT accountType from accounts where email = '$email'");
 $row = mysqli_fetch_array($query);
 if ($row['accountType'] == 'admin'){
     header("Location: admin", true, 301);
@@ -28,4 +28,3 @@ else{
     die();
 }
 
-?>

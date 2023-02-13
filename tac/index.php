@@ -18,7 +18,7 @@
             <div id="buttons">
                 <div id="button"><a href="gallery">Gallery</a></div>
                 <div id="button">Contact</div>
-                <div id="button">Terms and contidions</div>
+                <div id="button">Terms and conditions</div>
             </div>
             
                 <?php
@@ -57,6 +57,5 @@ kidspark@contact.com
 +48 093 452 174
         
         </div>
-    </div>
 </body>
 </html>

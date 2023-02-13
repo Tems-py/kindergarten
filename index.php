@@ -22,7 +22,7 @@ session_start();
             <div id="buttons">
                 <div id="button"><a href="gallery">Gallery</a></div>
                 <div id="button">Contact</div>
-                <div id="button">Terms and contidions</div>
+                <div id="button">Terms and conditions</div>
             </div>
             
                 <?php
@@ -93,6 +93,5 @@ session_start();
             </div>
         </div>
         </div>
-    </div>
 </body>
 </html>

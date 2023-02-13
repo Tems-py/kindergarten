@@ -7,7 +7,7 @@
     }
     $email = $_SESSION['email'];
     $conn = mysqli_connect("localhost", "root", "", "kindergarten");
-    $query = mysqli_query($conn, "SELECT * FROM `accounts` where email = '{$email}'");
+    $query = mysqli_query($conn, "SELECT * FROM `accounts` where email = '$email'");
     $row = mysqli_fetch_array($query);
     if ($row['accountType'] != "admin"){
         header("Location: http://localhost/kindergarten");
@@ -16,4 +16,4 @@
     $query = mysqli_query($conn, "SELECT * from payments");
     $row = mysqli_fetch_all($query);
     echo json_encode($row);
-?>
+

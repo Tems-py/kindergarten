@@ -14,7 +14,7 @@
             <div id="buttons">
                 <div id="button"><a href="gallery">Gallery</a></div>
                 <div id="button">Contact</div>
-                <div id="button">Terms and contidions</div>
+                <div id="button">Terms and conditions</div>
             </div>
             
                 <?php
@@ -34,8 +34,8 @@
             <div>
                 <form method="post" id="registerDiv">
                     Email:<input type="text" name="email" class="registerInput" placeholder="example@example.example"><br>
-                    Password:<input type="password" name="password" class="registerInput" placeholder="example_pasword"><br>
-                    Repeat:<input type="password" name="repeatPassword" class="registerInput" placeholder="*repeat* example_pasword"><br>
+                    Password:<input type="password" name="password" class="registerInput" placeholder="example_password"><br>
+                    Repeat:<input type="password" name="repeatPassword" class="registerInput" placeholder="*repeat* example_password"><br>
                     <input type="submit" value="Register" class="registerInput">
                 </form>
                 <?php
@@ -45,7 +45,7 @@
                 if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['repeatPassword'])){
                     if($_POST['password']==$_POST['repeatPassword']){
                         $query = mysqli_query($conn, "INSERT INTO `accounts`(`email`, `accountType`, `password`) VALUES ('{$_POST['email']}','NONE','{$_POST['password']}')");
-                        echo "Regirestration succesful!";
+                        echo "Registration successful!";
                     }
                     else{
                         echo "Passwords dont match!";
@@ -54,6 +54,6 @@
                 ?>
             </div>
         </div>
-    </div>
+
 </body>
 </html>

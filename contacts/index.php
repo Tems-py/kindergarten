@@ -14,7 +14,7 @@
             <div id="buttons">
                 <div id="button"><a href="gallery">Gallery</a></div>
                 <div id="button">Contact</div>
-                <div id="button">Terms and contidions</div>
+                <div id="button">Terms and conditions</div>
             </div>
             
                 <?php
@@ -39,6 +39,6 @@
             42 250 65 06<br>
             42 655 28 38
         </div>
-    </div>
+
 </body>
 </html>

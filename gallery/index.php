@@ -17,7 +17,7 @@
             <div id="buttons">
                 <div id="button"><a href="gallery">Gallery</a></div>
                 <div id="button">Contact</div>
-                <div id="button">Terms and contidions</div>
+                <div id="button">Terms and conditions</div>
             </div>
             
                 <?php
@@ -55,6 +55,6 @@
            <img src="https://robohash.org/tt?set=set4" alt="">
         </div>
         </div>
-    </div>
+
 </body>
 </html>
