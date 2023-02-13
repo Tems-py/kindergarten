@@ -10,7 +10,7 @@
 .row{
     flex-direction: row;
 }
-img{
+.row > img{
     border: #4E598C 5px solid;
     border-radius: 5px;
 }
