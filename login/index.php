@@ -13,25 +13,10 @@
 </head>
 <body>
     <div id="container">
-        <div id="navbar">
-            <div id="buttons">
-                <div id="button"><a href="gallery">Gallery</a></div>
-                <div id="button">Contact</div>
-                <div id="button">Terms and conditions</div>
-            </div>
-            
-                <?php
-
-                if (isset($_SESSION['email'])) {
-                    echo '<div id="profile"><img src="https://robohash.org/'.$_SESSION['email'].'?set=set4" alt="">  ';
-                    echo '<a href="panel">Panel</a>  ';
-                    echo '<a href="logout">Logout</a>';
-                }
-                else {
-                    echo '<a href="login">Login</a>';
-                }
-                ?>
-            </div>
+        <?php
+        include "../navbar.php";
+        navbar();
+        ?>
         </div>
         <div id="content">
             <div>
