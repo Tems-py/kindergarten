@@ -43,6 +43,21 @@
             ?>
             <div id="data">
                 <h1>Add new group</h1>
+                <?php
+                $children = '';
+                if (isset($_POST['name']) && isset($_POST['caretaker'])){
+                    $query = mysqli_query($conn, "INSERT INTO `groups`(`groupName`, `caretakerId`) VALUES ('{$_POST['name']}','{$_POST['caretaker']}')");
+                    $query = mysqli_query($conn, "SELECT groupId from `groups` order by groupId desc limit 1");
+                    $num = mysqli_fetch_array($query)["groupId"];
+                    $query = mysqli_query($conn, "SELECT `id` FROM children WHERE groupId = ''");
+                    while ($row = mysqli_fetch_array($query)){
+                        if (isset($_POST[$row['id']])){
+                            mysqli_query($conn, "UPDATE `children` SET `groupId` = '$num' WHERE `id` = {$row['id']}");
+                        }
+                    }
+                    echo "You added new group!";
+                }
+                ?>
                 <form action="" method="POST">
                     <label>
                         Name:
@@ -60,7 +75,6 @@
                             ?>
                         </select>
                     </label>
-                    <label>
                         You can assing child's to this group (optional)<br><br>
                         <?php
                             $query = mysqli_query($conn, "SELECT * from children ORDER BY familyName, 'name'");
@@ -71,15 +85,9 @@
                                 if ($row['groupId'] == ""){
                                     $dis = 'enabled';
                                 }
-                                echo "<input type='checkbox' name='{$row['id']}' {$dis}>{$row['familyName']} {$row['name']}<br>";
+                                echo "<label><input type='checkbox' name='{$row['id']}' {$dis}>{$row['familyName']} {$row['name']}</label>";
                             }
-                        ?>
-                    </label><br>
-                    <?php
-                        if (isset($_POST['name']) && isset($_POST['caretaker']) && isset($_POST['child'])){
-                            echo "{$_POST['child']}";
-                        }
-                    ?>
+                        ?><br>
                     <input type="submit" value="Add">
                 </form>    
             </div>
