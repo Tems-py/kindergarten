@@ -37,11 +37,10 @@
             </div>
         </div>
         <div id="content">
-            <div id="sidebar">
-                <a href="">Add new child</a>
-                <a href="edit_child">Edit child</a>
-                <a href="edit_parent">Edit parent</a>
-            </div>
+            <?php
+            include "../sidebar.php";
+            sidebar();
+            ?>
             <div id="data">
                 <form action="" method="POST">
                 Name:    

@@ -71,7 +71,7 @@
                                 if ($row['groupId'] == ""){
                                     $dis = 'enabled';
                                 }
-                                echo "<input type='checkbox' value='{$row['id']}' name='child' {$dis}>{$row['familyName']} {$row['name']}<br>";
+                                echo "<input type='checkbox' name='{$row['id']}' {$dis}>{$row['familyName']} {$row['name']}<br>";
                             }
                         ?>
                     </label><br>
