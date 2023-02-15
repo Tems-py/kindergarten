@@ -12,7 +12,7 @@
     <title>Kindergarten</title>
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/admin.css">
-    <link rel="stylesheet" href="../../../css/create_child.css">
+    <link rel="stylesheet" href="../../../css/create_group.css">
 </head>
 <body>
     <div id="container">
@@ -37,13 +37,51 @@
             </div>
         </div>
         <div id="content">
-            <div id="sidebar">
-                <a href="">Add new child</a>
-                <a href="edit_child">Edit child</a>
-                <a href="edit_parent">Edit parent</a>
-            </div>
+            <?php
+                include "../sidebar.php";
+                sidebar();
+            ?>
             <div id="data">
+                <h1>Add new group</h1>
+                <form action="" method="POST">
+                    <label>
+                        Name:
+                        <input type="text" name="name">
+                    </label>
+                    <label>
+                        Caretaker:
+                        <select name="caretaker" id="">
+                            <?php
+                                $query = mysqli_query($conn, "SELECT * from accounts WHERE accountType='educator'");
 
+                                while ($row = mysqli_fetch_array($query)){
+                                    echo "<option value='{$row['accountId']}'>{$row['name']} {$row['familyName']}</option>";
+                                }
+                            ?>
+                        </select>
+                    </label>
+                    <label>
+                        You can assing child's to this group (optional)<br><br>
+                        <?php
+                            $query = mysqli_query($conn, "SELECT * from children ORDER BY familyName, 'name'");
+
+
+                            while ($row = mysqli_fetch_array($query)){
+                                $dis = 'disabled';
+                                if ($row['groupId'] == ""){
+                                    $dis = 'enabled';
+                                }
+                                echo "<input type='checkbox' value='{$row['id']}' name='child' {$dis}>{$row['familyName']} {$row['name']}<br>";
+                            }
+                        ?>
+                    </label><br>
+                    <?php
+                        if (isset($_POST['name']) && isset($_POST['caretaker']) && isset($_POST['child'])){
+                            echo "{$_POST['child']}";
+                        }
+                    ?>
+                    <input type="submit" value="Add">
+                </form>    
             </div>
         </div>
 </body>
