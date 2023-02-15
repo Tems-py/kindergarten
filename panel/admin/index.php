@@ -39,11 +39,10 @@
             </div>
         </div>
         <div id="content">
-            <div id="sidebar">
-                <a href="./create_child">Add new child</a>
-                <a href="edit_child">Edit child</a>
-                <a href="edit_parent">Edit parent</a>
-            </div>
+            <?php
+                include "sidebar.php";
+                sidebar();
+            ?>
             <div id="data">
                 <div class="flex_row">
                     <h1>Welcome <?php echo $_SESSION["name"]?> to your kindergarten</h1>
