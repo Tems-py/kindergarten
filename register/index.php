@@ -21,6 +21,8 @@
                     Email:<input type="text" name="email" class="registerInput" placeholder="example@example.example"><br>
                     Password:<input type="password" name="password" class="registerInput" placeholder="example_password"><br>
                     Repeat:<input type="password" name="repeatPassword" class="registerInput" placeholder="*repeat* example_password"><br>
+                    Name: <input type="text" name="name" class="registerInput" placeholder="your name here"><br>
+                    Surname: <input type="text" class="registerInput" placeholder="your surname here">
                     <input type="submit" value="Register" class="registerInput">
                 </form>
                 <?php
@@ -29,7 +31,7 @@
                 
                 if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['repeatPassword'])){
                     if($_POST['password']==$_POST['repeatPassword']){
-                        $query = mysqli_query($conn, "INSERT INTO `accounts`(`email`, `accountType`, `password`) VALUES ('{$_POST['email']}','NONE','{$_POST['password']}')");
+                        $query = mysqli_query($conn, "INSERT INTO `accounts`(`email`, `accountType`, `password`,`name`,`familyName`) VALUES ('{$_POST['email']}','NONE','{$_POST['password']}'),'{$_POST['name']}','{$_POST['surname']}'");
                         echo "Registration successful!";
                     }
                     else{
