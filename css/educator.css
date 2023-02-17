@@ -10,7 +10,7 @@
 }
 #childInfo{
     background-color: dimgray;
-    width: 75%;
+    width: 65%;
     color: black;
     font-size: 1em;
     font-weight: 800;
@@ -32,10 +32,8 @@ hr{
     border-radius: 5px;
 }
 .stat{
-    float: left;
     width: 10%;
-    margin-left: auto;
-    margin-right: 3em;
+    
 }
 hr.child{
     border-top: 2px solid black;
@@ -56,4 +54,8 @@ hr.child1{
     border-top: 2px solid black;
     border-radius: 5px;
     width: 60%;
+}
+hr.paydiv{
+    border-top: 5px solid black;
+    border-radius: 5px;
 }

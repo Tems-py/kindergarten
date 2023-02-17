@@ -21,7 +21,7 @@
 <body>
     <div id="container">
         <div id="navbar">
-            <div id="buttons">Ś
+            <div id="buttons">
                 <div id="button"><a href="../../gallery">Gallery</a></div>
                 <div id="button">Contact</div>
                 <div id="button">Terms and Conditions</div>
@@ -49,15 +49,11 @@
                     echo "Welcome: ".$row['name']." ".$row['familyName']."<hr> email: ".$row["email"];
                 ?>
             </div>
+
+                
             <div class="flex_row">
                 <div class="stat flex_column">
                     <h3>Group:</h3>
-                    <h2><?php
-                        $query = mysqli_query($conn, "SELECT * FROM `accounts` WHERE email like '$email'");
-                        $row = mysqli_fetch_array($query);
-                        $accId = $row['accountId'];
-
-                    ?></h2>
                     <div class="stat_num">
 
                     <?php
@@ -66,15 +62,21 @@
                     $row = mysqli_fetch_array($query);
                     $accId = $row['accountId'];
                 
-                    $query = mysqli_query($conn, "SELECT groupId FROM `groups` where groupId = '$accId'");
-                    $grId = $row;
-                    echo $count;
+                    $query = mysqli_query($conn, "SELECT groupId FROM `groups` where caretakerId = '$accId'");
+                    $row = mysqli_fetch_array($query);
+                    $grId = $row['groupId'];
+        
+                    if(!is_null($grId)){
+                        echo $grId;
+                    }
+                    else{
+                        echo "0";
+                    }
                     ?>
 
                     </div>
-                    <img src="../../img/user.png" alt="">
+                    <img src="../../img/crowd-of-users.png" alt="">
                 </div>
-            <div class="flex_row">
                 <div class="stat flex_column">
                     <h3>Children</h3>
                     <div class="stat_num">
@@ -101,7 +103,7 @@
                         $query = mysqli_query($conn, "SELECT * FROM `accounts` WHERE email like '$email'");
                         $row = mysqli_fetch_array($query);
                         $accId = $row['accountId'];
-                        $query = mysqli_query($conn, "SELECT * FROM `children` JOIN relations ON children.id = relations.childId where relations.accountId = '$accId'");
+                        $query = mysqli_query($conn, "SELECT * FROM `children` JOIN groups ON children.groupId = groups.groupId where caretakerId = '$accId'");
                         while($row=mysqli_fetch_array($query)){
                             $count = $count + 1;
                             echo "Name: ".$row['name']." ".$row['familyName']."<hr class='child'> birthdate: ".$row["birthdate"]."<hr class='child'> Group Id: ".$row["groupId"]."<hr>";
@@ -110,6 +112,39 @@
                     ?>
             
                 </div>
+            </div>
+             <div id="payments">
+                        <h2>To be paid:</h2>
+                        <?php
+                       
+                        $query = mysqli_query($conn, "SELECT * FROM `children` JOIN groups ON children.groupId = groups.groupId where caretakerId = '$accId'");
+                        while($row=mysqli_fetch_array($query)){
+                            echo "<h1> Child: ".$row['name']." ".$row['familyName']."</h1>";
+                            $id = $row['id'];
+                            $query2 = mysqli_query($conn, "SELECT * FROM `paymentnotice` WHERE childId = $id");
+                            while($row2=mysqli_fetch_array($query2)){
+                                echo "Payment due to: ".$row2['dateDue']."<hr class='child1'> Cost: ".$row2["cost"]."<hr class='child1'> Objectives: ".$row2["objectives"];
+                                echo "<hr class='child'>";
+                            }
+                            echo "<hr>";
+                        }
+                        ?>
+                        <hr class="paydiv">
+                        <h2>Paid:</h2>
+                        <?php
+                       
+                        $query = mysqli_query($conn, "SELECT * FROM `children` JOIN groups ON children.groupId = groups.groupId where caretakerId = '$accId'");
+                        while($row=mysqli_fetch_array($query)){
+                            echo "<h1> Child: ".$row['name']." ".$row['familyName']."</h1>";
+                            $id = $row['id'];
+                            $query2 = mysqli_query($conn, "SELECT * FROM `payments` WHERE childId = $id");
+                            while($row2=mysqli_fetch_array($query2)){
+                                echo "Payment of date : ".$row2['dateDue']."<hr class='child1'> Cost: ".$row2["cost"]."<hr class='child1'> Objectives: ".$row2["objectives"];
+                                echo "<hr class='child'>";
+                            }
+                            echo "<hr>";
+                        }
+                        ?>
             </div>
         </div>
 </body>
