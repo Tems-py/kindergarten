@@ -70,7 +70,7 @@
                         echo $grId;
                     }
                     else{
-                        echo "0";
+                        echo "N/A";
                     }
                     ?>
 
