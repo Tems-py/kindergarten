@@ -36,6 +36,7 @@
                 <input type="date" name="birthdate">
                 Group (leave empty if needed):
                 <select name="group" id="">
+                    <option disabled selected value> -- select an option -- </option>
                     <?php
                         $query = mysqli_query($conn, "SELECT groupId as id, groupName as name from `GROUPS`");
 
@@ -46,17 +47,18 @@
                     
                 </select><br>
                 <input type="submit" value="Add">
-                </form>
-                <?php
-                    if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['birthdate']) && isset($_POST['group'])){
+                    <?php
+                    if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['birthdate'])){
                         $name = $_POST['name'];
                         $surname = $_POST['surname'];
                         $birthdate = $_POST['birthdate'];
-                        $group = $_POST['group'];
+                        $group = $_POST['group'] ?? "";
 
                         $query = mysqli_query($conn, "INSERT INTO `children` (`id`, `name`, `familyName`, `birthdate`, `groupId`) VALUES (NULL, '$name', '$surname', '$birthdate', '$group');");
+                        echo "Added new child!";
                     }
-                ?>
+                    ?>
+                </form>
             </div>
         </div>
 </body>

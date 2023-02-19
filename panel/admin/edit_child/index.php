@@ -56,7 +56,7 @@
                             Group:
                             <select id="i_group" name="group">
                                 <?php
-                                $query = mysqli_query($conn, "SELECT groupId as id, groupName as name from 'GROUPS'");
+                                $query = mysqli_query($conn, "SELECT groupId as id, groupName as name from `GROUPS`");
 
                                 while ($row = mysqli_fetch_array($query)){
                                     echo "<option value='{$row['id']}'>{$row['name']}</option>";

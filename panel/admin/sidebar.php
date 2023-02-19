@@ -9,6 +9,8 @@ function sidebar(){
                 <a href='$admin/edit_child'>Edit child</a>
                 <a href='$admin/edit_parent'>Edit parent</a>
                 <a href='$admin/create_group'>Add new group</a>
+                <a href='$admin/edit_group'>Edit group</a>
+                
     </div>
     ";
     echo $s;
