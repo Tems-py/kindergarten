@@ -45,11 +45,11 @@
                     $query = mysqli_query($conn, "SELECT groupId FROM `groups` where caretakerId = '$accId'");
                     $row = mysqli_fetch_array($query);
                     $grId = $row['groupId'];
-                    $query = mysqli_query($conn, "SELECT * FROM `children` JOIN groups ON children.groupId = groups.groupId where caretakerId = '$accId'");
+                    $query = mysqli_query($conn, "SELECT groupId FROM `groups` where caretakerId = '$accId'");
                     while($row=mysqli_fetch_array($query)){
                         $count = $count + 1;
                     }
-                    if($count>0;){
+                    if($count>0){
                         echo $grId;
                     }
                     else{
