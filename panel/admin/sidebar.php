@@ -7,10 +7,14 @@ function sidebar(){
     <div id='sidebar'>
                 <a href='$admin/create_child'>Add new child</a>
                 <a href='$admin/edit_child'>Edit child</a>
+                <a href='$admin/delete_child'>Delete child</a>
+                <span></span>
                 <a href='$admin/edit_account'>Edit account</a>
+                <a href='$admin/delete_account'>Delete account</a>
+                <span></span>
                 <a href='$admin/create_group'>Add new group</a>
                 <a href='$admin/edit_group'>Edit group</a>
-                
+                <a href='$admin/delete_group'>Delete group</a>
     </div>
     ";
     echo $s;
