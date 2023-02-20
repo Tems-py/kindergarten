@@ -3,15 +3,7 @@
     $conn = mysqli_connect("localhost", "root", "", "kindergarten");
     auth("educator");
 ?>
-<?php 
-    session_start();
-    $conn = mysqli_connect("localhost", "root", "", "kindergarten");
-    $query = mysqli_query($conn, "SELECT * FROM `accounts`");
-    if (!isset($_SESSION["name"])){
-        header("Location: http://localhost/kindergarten");
-        die();
-    }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +67,7 @@
                     $query = mysqli_query($conn, "SELECT * FROM `accounts` WHERE email like '$email'");
                     $row = mysqli_fetch_array($query);
                     $accId = $row['accountId'];
-                    $query = mysqli_query($conn, "SELECT * FROM `children` JOIN relations ON children.id = relations.childId where relations.accountId = '$accId'");
+                    $query = mysqli_query($conn, "SELECT groupId FROM `groups` where caretakerId = '$accId'");
                     while($row=mysqli_fetch_array($query)){
                         $count = $count + 1;
                     }

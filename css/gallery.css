@@ -9,8 +9,10 @@
 }
 .row{
     flex-direction: row;
+    gap: 1em;
 }
 .row > img{
     border: #4E598C 5px solid;
     border-radius: 5px;
+    min-width: 5em;
 }
