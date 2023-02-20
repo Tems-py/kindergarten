@@ -87,3 +87,6 @@ body{
 
 }
 
+.hidden {
+    display: none;
+}
