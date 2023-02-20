@@ -42,3 +42,11 @@ img {
     min-width: 0;
     max-width: 100%;
 }
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 0.3em;
+    margin: auto;
+    padding: 0.5em;
+}

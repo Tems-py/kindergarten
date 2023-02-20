@@ -19,7 +19,6 @@ function sidebar(){
                 <span></span>
                 <a href='$admin/add_payment'>Request payment</a>
                 <a href='$admin/payments'>View payments</a>
-
     </div>
     ";
     echo $s;

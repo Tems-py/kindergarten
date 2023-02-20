@@ -84,6 +84,8 @@ body{
 
 .stat > img {
     max-width: 200px;
-
 }
 
+.hidden {
+    display: none;
+}
