@@ -31,11 +31,7 @@
                 
                 if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['repeatPassword'])){
                     if($_POST['password']==$_POST['repeatPassword']){
-<<<<<<< HEAD
                         $query = mysqli_query($conn, "INSERT INTO `accounts`(`email`, `name`, `familyName`, `accountType`, `password`) VALUES ('{$_POST['email']}','{$_POST['name']}','{$_POST['surname']}','parent','{$_POST['password']}');");
-=======
-                        $query = mysqli_query($conn, "INSERT INTO `accounts`(`email`, `accountType`, `password`,`name`,`familyName`) VALUES ('{$_POST['email']}','parent','{$_POST['password']}'),'{$_POST['name']}','{$_POST['surname']}'");
->>>>>>> adf12b14d0d2de85b92eeaae5ac9da097a5b3320
                         echo "Registration successful!";
                     }
                     else{
