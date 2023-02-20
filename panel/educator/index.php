@@ -41,12 +41,15 @@
                     $query = mysqli_query($conn, "SELECT * FROM `accounts` WHERE email like '$email'");
                     $row = mysqli_fetch_array($query);
                     $accId = $row['accountId'];
-                
+                    $count = 0;
                     $query = mysqli_query($conn, "SELECT groupId FROM `groups` where caretakerId = '$accId'");
                     $row = mysqli_fetch_array($query);
                     $grId = $row['groupId'];
-        
-                    if(!is_null($grId)){
+                    $query = mysqli_query($conn, "SELECT * FROM `children` JOIN groups ON children.groupId = groups.groupId where caretakerId = '$accId'");
+                    while($row=mysqli_fetch_array($query)){
+                        $count = $count + 1;
+                    }
+                    if($count>0;){
                         echo $grId;
                     }
                     else{

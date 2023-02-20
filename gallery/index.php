@@ -20,24 +20,24 @@
         </div>
         <div id="content">
            <div class="row">
-           <img src="https://robohash.org/ks?set=set4" alt="">
-           <img src="https://robohash.org/ap?set=set4" alt="">
-           <img src="https://robohash.org/kindergarten?set=set4" alt="">
+           <img src="../img/doors.png" alt="">
+           <img src="../img/childroom1.png" alt="">
+           <img src="../img/childroom2.png" alt="">
            </div>
            <div class="row">
-           <img src="https://robohash.org/tt?set=set4" alt="">
-           <img src="https://robohash.org/tf?set=set4" alt="">
-           <img src="https://robohash.org/ttt?set=set4" alt="">
+           <img src="../img/childroom3.png" alt="">
+           <img src="../img/childroom4.png" alt="">
+           <img src="../img/childroom5.png" alt="">
             </div>
            <div class="row">
-           <img src="https://robohash.org/tt1?set=set4" alt="">
-           <img src="https://robohash.org/tt2?set=set4" alt="">
-           <img src="https://robohash.org/tt3?set=set4" alt="">
+           <img src="../img/dinning1.png" alt="">
+           <img src="../img/dinning2.png" alt="">
+           <img src="../img/hall.png" alt="">
            </div>
            <div class="row">
-           <img src="https://robohash.org/et?set=set4" alt="">
-           <img src="https://robohash.org/ft?set=set4" alt="">
-           <img src="https://robohash.org/git?set=set4" alt="">
+           <img src="../img/movies.png" alt="">
+           <img src="../img/playground1.png" alt="">
+           <img src="../img/playground2.png" alt="">
         </div>
         </div>
 
