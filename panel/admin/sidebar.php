@@ -7,7 +7,7 @@ function sidebar(){
     <div id='sidebar'>
                 <a href='$admin/create_child'>Add new child</a>
                 <a href='$admin/edit_child'>Edit child</a>
-                <a href='$admin/edit_parent'>Edit parent</a>
+                <a href='$admin/edit_account'>Edit account</a>
                 <a href='$admin/create_group'>Add new group</a>
                 <a href='$admin/edit_group'>Edit group</a>
                 

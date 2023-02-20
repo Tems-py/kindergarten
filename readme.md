@@ -9,5 +9,4 @@
 800x600 px musi dzialac
 
 todo:
-- fix register wih name and surname
-- jak parent nie ma dzieci to dziwnie panel sie wyswieela
+- Notice: Trying to access array offset on value of type null in C:\xampp\htdocs\kindergarten\panel\educator\index.php on line 51

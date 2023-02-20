@@ -11,7 +11,7 @@ function auth($type){
     $row = mysqli_fetch_array($query);
 
     if ($row['accountType'] != $type) {
-        header("Location: http://localhost/kindergarten/wahueawu");
+        header("Location: http://localhost/kindergarten/");
         die();
     }
 }

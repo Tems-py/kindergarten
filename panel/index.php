@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_SESSION["name"])){
-    header("Location: http://localhost/kindergarten/eawegagydgy");
+    header("Location: http://localhost/kindergarten/");
     die();
 }
 $conn = mysqli_connect("localhost", "root", "", "kindergarten");
