@@ -86,4 +86,9 @@ body{
     max-width: 200px;
 
 }
-
+.desc{
+    padding: auto;
+    font-size: 1em;
+    font-weight: 800;
+    gap: 2em;
+}
