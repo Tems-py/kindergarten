@@ -77,6 +77,18 @@ session_start();
                 <img src="img/crowd-of-users.png" alt="">
             </div>
         </div>
+        <div class="flex_row desc">Welcome to KidsPark, a premier kindergarten dedicated to providing a safe, nurturing, and enriching environment for young children. At KidsPark, we believe that every child deserves the best possible start in life, and we are committed to fostering their development through play-based learning and age-appropriate activities.<br><br>
+
+        Our program is designed to promote creativity, socialization, and cognitive development, with a focus on building foundational skills that will serve your child well throughout their academic and personal journey. We understand that every child is unique, which is why our experienced and passionate teachers work closely with parents to develop personalized learning plans tailored to each child's individual needs and interests.<br><br>
+
+        As one of the most trusted kindergartens in the community, KidsPark has a proven track record of success in preparing children for academic excellence and lifelong learning. Many of our alumni have gone on to achieve great success in various fields, including business, medicine, and the arts. Our graduates have also been recognized for their outstanding achievements, including scholarships, awards, and acceptance into prestigious universities.<br><br>
+
+        Among the famous children that have attended KidsPark are the children of renowned musicians, actors, and athletes. Our kindergarten has served as a launchpad for the talents and aspirations of these young individuals, providing them with the tools and resources they need to realize their full potential.<br><br>
+
+        The story of KidsPark began over two decades ago, when a group of passionate educators came together with a shared vision of creating a kindergarten that would provide the highest quality of education for young children. Since then, we have grown into a vibrant community of teachers, parents, and children who are dedicated to making a positive impact on the world.<br><br>
+
+        We invite you to experience the difference that KidsPark can make in your child's life. Contact us today to schedule a tour of our facilities and learn more about our innovative programs and personalized approach to learning. We look forward to welcoming you and your child to our KidsPark family!<br><br>
+        </div>
         </div>
 </body>
 </html>
