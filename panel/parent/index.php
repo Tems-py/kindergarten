@@ -3,15 +3,7 @@
     $conn = mysqli_connect("localhost", "root", "", "kindergarten");
     auth("parent");
 ?>
-<?php 
-    session_start();
-    $conn = mysqli_connect("localhost", "root", "", "kindergarten");
-    $query = mysqli_query($conn, "SELECT * FROM `accounts`");
-    if (!isset($_SESSION["name"])){
-        header("Location: http://localhost/kindergarten");
-        die();
-    }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
