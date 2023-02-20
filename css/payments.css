@@ -1,0 +1,17 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+}
+
+#option1, #option2, #option3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.hidden {
+    display: none !important;
+}
