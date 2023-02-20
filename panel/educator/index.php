@@ -1,4 +1,8 @@
-
+<?php
+    include "../../auth.php";
+    $conn = mysqli_connect("localhost", "root", "", "kindergarten");
+    auth("educator");
+?>
 <?php 
     session_start();
     $conn = mysqli_connect("localhost", "root", "", "kindergarten");
