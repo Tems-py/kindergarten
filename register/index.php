@@ -29,7 +29,7 @@
                 
                 $conn = mysqli_connect('localhost','root','','kindergarten');
                 
-                if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['repeatPassword'])){
+                if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['repeatPassword']) && isset($_POST['surname']) && isset($_POST['name'])){
                     if($_POST['password']==$_POST['repeatPassword']){
                         $query = mysqli_query($conn, "INSERT INTO `accounts`(`email`, `name`, `familyName`, `accountType`, `password`) VALUES ('{$_POST['email']}','{$_POST['name']}','{$_POST['surname']}','parent','{$_POST['password']}');");
                         echo "Registration successful!";

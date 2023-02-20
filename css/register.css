@@ -15,13 +15,12 @@
     flex-direction: column;
 }
 .registerInput{
-    width: 10em;
+    min-width: 15em;
     color: #FFFFFF;
     padding: 0.3em;
     background-color: #FF8C42;
     border: #4E598C 5px solid;
     border-radius: 10px;
-
 }
 .registerInput:hover{
     background-color: #e37d3d;
