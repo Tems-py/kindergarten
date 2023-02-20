@@ -22,7 +22,7 @@
                     Password:<input type="password" name="password" class="registerInput" placeholder="example_password"><br>
                     Repeat:<input type="password" name="repeatPassword" class="registerInput" placeholder="*repeat* example_password"><br>
                     Name: <input type="text" name="name" class="registerInput" placeholder="your name here"><br>
-                    Surname: <input type="text" class="registerInput" placeholder="your surname here">
+                    Surname: <input type="text" class="registerInput" placeholder="your surname here" name="surname">
                     <input type="submit" value="Register" class="registerInput">
                 </form>
                 <?php
