@@ -90,7 +90,7 @@ body{
     display: none;
 }
 
-input[type=text], select, input[type=date], input[type=email]{
+input[type=text], select, input[type=date], input[type=email], input[type=password]{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
