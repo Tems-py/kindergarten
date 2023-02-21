@@ -87,15 +87,17 @@
                             $query = mysqli_query($conn, "SELECT * FROM `accounts` where accountType = 'parent'");
 
                             while ($row = mysqli_fetch_array($query)){
-                                echo "<option value='{$row['accountId']}'>{$row['name']} {$row['familyName']} ({$row['id']})</option>";
+                                echo "<option value='{$row['accountId']}'>{$row['name']} {$row['familyName']} ({$row['accountId']})</option>";
                             }
                             ?>
                         </select> <input type="button" value="Add" id="add_parent">
                     </div>
-                    <ul id="p_list">
+                    <div>
+                        <ul id="p_list">
 
-                    </ul>
-                    <input type="button" value="Update parents" id="p_add">
+                        </ul>
+                        <input type="button" value="Update parents" id="p_add">
+                    </div>
                 </div>
             </div>
         </div>

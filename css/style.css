@@ -91,12 +91,12 @@ body{
 }
 
 input[type=text], select, input[type=date], input[type=email], input[type=password]{
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
+    padding: 10px 18px;
+    margin: 8px 0px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 label {
@@ -106,13 +106,13 @@ label {
 
 input[type=submit], input[type=button]
 {
-    background-color: #4E598C;
     color: white;
-    padding: 14px 20px;
+    padding: 12px 18px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    background-color: #4E598C;
 }
 
 body {
