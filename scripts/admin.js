@@ -46,20 +46,20 @@ axios({
         xValues = Object.values(temp);
         data = Object.keys(temp);
 
-        new Chart("myChart", {
-            type: "line",
-            data: {
-                labels: data,
-                datasets: [{
-                data: xValues,
-                borderColor: "green",
-                fill: true
-                }]
-            },
-            options: {
-                legend: {display: false}
-            }
-            });
+        // new Chart("myChart", {
+        //     type: "line",
+        //     data: {
+        //         labels: data,
+        //         datasets: [{
+        //         data: xValues,
+        //         borderColor: "green",
+        //         fill: true
+        //         }]
+        //     },
+        //     options: {
+        //         legend: {display: false}
+        //     }
+        //     });
 
     })
     .catch(function (error) {

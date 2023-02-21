@@ -1,5 +1,6 @@
 <?php
-function sidebar(){
+function sidebar(): void
+{
     $admin = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     $admin = explode("admin", $admin);
     $admin = $admin[0]."admin";

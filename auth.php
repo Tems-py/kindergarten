@@ -1,5 +1,6 @@
 <?php
-function auth($type){
+function auth($type): void
+{
     session_start();
     if (!isset($_SESSION["name"])){
         header("Location: http://localhost/kindergarten/");
