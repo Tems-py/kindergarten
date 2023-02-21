@@ -89,3 +89,32 @@ body{
 .hidden {
     display: none;
 }
+
+input[type=text], select, input[type=date], input[type=email]{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=submit], input[type=button]
+{
+    background-color: #4E598C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+body {
+    background: bisque;
+}

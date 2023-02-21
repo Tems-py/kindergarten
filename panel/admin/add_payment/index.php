@@ -35,7 +35,6 @@
                             <option value="0" disabled selected>-- Select --</option>
                             <option value="1">Everyone</option>
                             <option value="2">Children from group</option>
-                            <option value="3">Select children</option>
                         </select>
                     </label>
                     <div class="hidden" id="option1">

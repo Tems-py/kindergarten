@@ -36,7 +36,7 @@ $conn = mysqli_connect("localhost", "root", "", "kindergarten");
                 ?>
             </div>
             <label for="">
-                Chidl:
+                Child:
             <select name="children">
                 <?php
                 $query = mysqli_query($conn, "SELECT * FROM `children`");

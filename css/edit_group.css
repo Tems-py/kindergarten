@@ -8,5 +8,8 @@ form {
 
 input[type="submit"]{
     max-width: 10em;
+}
 
+label {
+    display: block !important;
 }
