@@ -79,17 +79,23 @@
                             $query = mysqli_query($conn, "UPDATE `children` SET `name` = '$name', `familyName` = '$surname', `birthdate` = '$birthdate', `groupId` = '$group' WHERE `children`.`id` = $id;");
                         }
                     ?>
-                <div id="parents">
+                <div id="parents" class="flex_column">
                     <h1>Assign parents</h1>
-                    <select name="" id="">
-                        <?php
-                        $query = mysqli_query($conn, "SELECT * FROM `accounts` where accountType = 'parent'");
+                    <div>
+                        <select name="" id="parent">
+                            <?php
+                            $query = mysqli_query($conn, "SELECT * FROM `accounts` where accountType = 'parent'");
 
-                        while ($row = mysqli_fetch_array($query)){
-                            echo "<option value='{$row['id']}'>{$row['name']} {$row['familyName']} ({$row['id']})</option>";
-                        }
-                        ?>
-                    </select>
+                            while ($row = mysqli_fetch_array($query)){
+                                echo "<option value='{$row['accountId']}'>{$row['name']} {$row['familyName']} ({$row['id']})</option>";
+                            }
+                            ?>
+                        </select> <input type="button" value="Add" id="add_parent">
+                    </div>
+                    <ul id="p_list">
+
+                    </ul>
+                    <input type="button" value="Update parents" id="p_add">
                 </div>
             </div>
         </div>
