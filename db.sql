@@ -90,9 +90,9 @@ CREATE TABLE `groups` (
 --
 
 INSERT INTO `groups` (`groupId`, `groupName`, `caretakerId`) VALUES
-(1, 'Spacemen', 1),
-(2, 'Ricks', 3),
-(3, 'Mortys', 2);
+(1, 'Ladybugs', 1),
+(2, 'Flowers', 3),
+(3, 'Bees', 2);
 
 -- --------------------------------------------------------
 
