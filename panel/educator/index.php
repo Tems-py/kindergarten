@@ -122,7 +122,7 @@
                             $id = $row['id'];
                             $query2 = mysqli_query($conn, "SELECT * FROM `payments` WHERE childId = $id");
                             while($row2=mysqli_fetch_array($query2)){
-                                echo "Payment of date : ".$row2['dateDue']."<hr class='child1'> Cost: ".$row2["cost"]."<hr class='child1'> Objectives: ".$row2["objectives"];
+                                echo "Payment of date : ".$row2['dateDue']."<hr class='child1'> Cost: ".$row2["cost"]."<hr class='child1'> Objectives: ".$row2["objective"];
                                 echo "<hr class='child'>";
                             }
                             echo "<hr>";
